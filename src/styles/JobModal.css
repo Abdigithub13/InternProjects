@@ -1,0 +1,271 @@
+/* General Styles */
+.job-modal-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1050;
+  backdrop-filter: none; /* Removed background blur */
+  background-color: transparent; /* Transparent background */
+  pointer-events: none; /* Allow interaction with the outside */
+}
+
+/* Modal Content */
+.modal-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  width: 90%; /* Expanded width */
+  max-width: 1100px; /* Maximum width for larger screen */
+  animation: fadeIn 0.5s ease-out;
+  transition: all 0.3s ease-out;
+  transform: scale(1); /* Removed scaling */
+  pointer-events: auto; /* Ensure form content is clickable */
+}
+
+/* Left Section */
+.modal-left {
+  flex: 1;
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Right Section */
+.modal-right {
+  flex: 1;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Form Styles */
+.form-group {
+  margin-bottom: 25px;
+}
+
+label {
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  display: block;
+  color: #495057;
+}
+
+.form-control {
+  padding: 15px;
+  border-radius: 15px;
+  font-size: 1rem;
+  border: 2px solid #ced4da; /* Default border color */
+  background-color: #f8f9fa;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out,
+    border 0.3s ease-in-out;
+}
+
+/* Form input focus interaction */
+.form-control:focus {
+  background-color: #ffffff;
+  outline: none;
+  transform: translateY(-2px); /* Slight lift effect on focus */
+  border-color: rgb(65, 65, 197); /* Green border on focus */
+}
+
+/* Buttons */
+.btn {
+  padding: 12px 20px; /* Adjust padding for consistent height */
+  font-size: 1.1rem;
+  border-radius: 10px;
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+  display: inline-flex; /* Inline-flex allows the button to shrink to fit the content */
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap; /* Prevent text from wrapping */
+  width: auto; /* Auto width for buttons to fit the content length */
+  min-width: 0; /* Remove any minimum width */
+  margin: auto;
+}
+
+/* Primary Button */
+.btn-success {
+  background-color: #28a745;
+  border: none;
+  color: white;
+}
+
+.btn-success:hover {
+  background-color: #218838;
+  transform: translateY(-3px); /* Lift on hover */
+  box-shadow: 0 4px 15px rgba(40, 167, 69, 0.2); /* Light green shadow */
+}
+
+/* Secondary Button */
+.btn-secondary {
+  border: none;
+  border-color: #6f8ca3;
+  color: #16212b;
+  min-width: 10px;
+  margin-left: -250px;
+  margin-bottom: 360px;
+  padding: 10px 20px; /* Adjust padding for consistent size */
+  font-size: 1rem;
+  border-radius: 5px;
+  position: relative; /* Position relative to its container */
+  left: 0;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+  transform: translateY(-3px);
+}
+
+/* Danger Button */
+.btn-danger {
+  background-color: #dc3545;
+  border: none;
+  color: white;
+  padding: 12px 25px;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+  transform: translateY(-3px);
+}
+
+/* No box shadow on modal container */
+.modal-container {
+  box-shadow: none; /* No box shadow */
+}
+
+/* Popup Modal */
+.popup-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2); /* Lighter background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1060;
+  backdrop-filter: blur(10px); /* Retained blur for slight focus on popup */
+  pointer-events: none; /* Ensures background is not blocking clicks */
+}
+
+.popup-content {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 20px;
+  width: 350px;
+  max-width: 90%;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3); /* Retained shadow for popup for emphasis */
+  text-align: center;
+  animation: fadeIn 0.4s ease-out;
+  pointer-events: auto; /* Ensures popup content is interactive */
+}
+
+/* Close Button */
+.close-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 26px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: #6c757d;
+}
+
+.close-button:hover {
+  color: #000;
+  transform: scale(1.2);
+}
+
+/* Error Message */
+.error {
+  color: #dc3545;
+  font-size: 1rem;
+  margin-top: 15px;
+  text-align: center;
+}
+
+/* List Group */
+.list-group {
+  margin-top: 15px;
+}
+
+.list-group-item {
+  padding: 12px 20px;
+  border-radius: 15px;
+  margin-bottom: 12px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list-group-item:hover {
+  background-color: #f8f9fa;
+  transform: scale(1.05); /* Slight hover scale for interactivity */
+  transition: transform 0.2s ease-out;
+}
+
+/* Button Animations */
+.btn:hover {
+  transform: translateY(-3px); /* Lift the button on hover */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+/* Responsive adjustments for smaller screens */
+
+@media (max-width: 768px) {
+  .modal-content {
+    width: 90%; /* Make the modal content take up 90% of the screen width */
+    padding: 15px; /* Reduce padding for smaller screens */
+  }
+
+  .btn {
+    /* Make buttons full-width */
+    padding: 10px; /* Adjust padding for smaller buttons */
+  }
+  .btn-secondary {
+    margin-left: 0; /* Remove left margin for vertical layout */
+    width: 70%; /* Make the button full-width */
+    margin-left: 0;
+  }
+
+  .form-control {
+    font-size: 0.9rem; /* Reduce font size for inputs */
+    padding: 10px; /* Adjust padding for smaller inputs */
+  }
+
+  .list-group-item {
+    flex-direction: column; /* Stack content vertically */
+    align-items: flex-start; /* Align items to the left */
+    padding: 10px; /* Adjust padding */
+  }
+
+  .popup-content {
+    width: 90%; /* Make the popup content take up 90% of the screen width */
+    padding: 20px; /* Adjust padding */
+  }
+}

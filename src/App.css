@@ -1,0 +1,177 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Header Styles */
+.app-header {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.home-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.home-link:hover {
+  text-decoration: underline;
+}
+
+/* App Container */
+.app-container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  width: 200px;
+  background-color: #343a40;
+  color: white;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin-bottom: 15px;
+}
+
+.sidebar-link {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  text-align: left;
+  cursor: pointer;
+  padding: 10px;
+  width: 100%;
+}
+
+.sidebar-link:hover {
+  background-color: #495057;
+  border-radius: 5px;
+}
+
+/* Main Content Styles */
+.main-content {
+  flex: 1;
+  padding: 20px;
+  background-color: #f8f9fa;
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: none; /* Removed background blur */
+  background-color: transparent; /* Transparent background */
+  pointer-events: none; /* Allow interaction with the outside */
+}
+
+/* Modal Content */
+.modal-content {
+  padding: 0px; /* Keep padding for proper spacing */
+  border-radius: 15px; /* Keep rounded corners */
+  box-shadow: none; /* Remove the shadow */
+  width: 800px; /* Keep the width */
+  max-width: 100%; /* Ensure it doesn't exceed the container */
+  position: relative; /* Keep positioning */
+  padding-left: 30px;
+}
+
+.modal-right {
+  margin-top: 20px; /* Add spacing above the button */
+}
+
+@keyframes popup-animation {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+/* Responsive Header */
+@media (max-width: 768px) {
+  .app-header {
+    flex-direction: column; /* Stack the title and home link vertically */
+    align-items: flex-start; /* Align items to the left */
+    padding: 10px; /* Adjust padding */
+  }
+
+  .app-header h1 {
+    font-size: 1rem; /* Reduce font size for smaller screens */
+    margin-bottom: 10px; /* Add spacing below the title */
+  }
+
+  .home-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-left: auto; /* Push the home link to the far right */
+  }
+}
+
+/* Responsive Sidebar */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%; /* Make the sidebar full-width */
+    height: auto; /* Adjust height */
+    position: relative; /* Remove fixed positioning */
+    padding: 10px; /* Adjust padding */
+  }
+
+  .sidebar ul li {
+    margin-bottom: 10px; /* Reduce spacing between items */
+  }
+
+  .sidebar-link {
+    font-size: 0.9rem; /* Reduce font size for smaller screens */
+    padding: 8px; /* Adjust padding */
+  }
+}
+
+/* Responsive Main Content */
+@media (max-width: 768px) {
+  .main-content {
+    padding: 10px; /* Reduce padding for smaller screens */
+  }
+}
+
+/* Responsive Modal */
+@media (max-width: 768px) {
+  .modal-content {
+    width: 90%; /* Make the modal content take up 90% of the screen width */
+    padding: 0; /* Adjust padding for smaller screens */
+    margin-right: 8px;
+  }
+}
